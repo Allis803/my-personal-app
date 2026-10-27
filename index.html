@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Your personal dashboard for tasks and notes.">
+  <title>My Personal App</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">MY SPACE<span>.</span></a>
+    <button id="themeBtn" class="icon-btn" aria-label="Change theme">☀️</button>
+  </header>
+
+  <main class="container">
+    <section class="welcome card">
+      <p class="eyebrow" id="today"></p>
+      <p class="muted">WELCOME TO YOUR PERSONAL SPACE</p>
+      <h1>Hello, <span id="displayName">Friend</span> 👋</h1>
+      <p class="muted">Your day, your plans, your space.</p>
+      <div class="name-row">
+        <input id="nameInput" maxlength="30" placeholder="Enter your name">
+        <button id="saveName" class="secondary-btn">Save name</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat card">
+        <span class="stat-icon">📋</span>
+        <p class="muted">Total tasks</p>
+        <h2 id="totalTasks">0</h2>
+      </article>
+      <article class="stat card">
+        <span class="stat-icon">✅</span>
+        <p class="muted">Completed</p>
+        <h2 id="doneTasks">0</h2>
+      </article>
+    </section>
+
+    <section class="card section-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">STAY ORGANIZED</p>
+          <h2>My daily tasks</h2>
+        </div>
+      </div>
+      <form id="taskForm" class="input-row">
+        <input id="taskInput" maxlength="150"
+          placeholder="What do you need to do?" required>
+        <button class="primary-btn" type="submit">Add</button>
+      </form>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyTasks" class="empty">No tasks yet. Add your first one!</p>
+    </section>
+
+    <section class="card section-card">
+      <p class="eyebrow">YOUR THOUGHTS</p>
+      <h2>My notes</h2>
+      <textarea id="notes" rows="7" maxlength="10000"
+        placeholder="Write your ideas, plans or reminders here..."></textarea>
+      <p id="saveStatus" class="muted small">Notes are saved on this device.</p>
+    </section>
+
+    <footer>
+      Made for you, one day at a time. ✨
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
