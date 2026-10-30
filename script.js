@@ -45,6 +45,9 @@ function applyTheme() {
 function updateName() {
   $("displayName").textContent = savedName || "Friend";
   $("nameInput").value = savedName === "Friend" ? "" : savedName;
+
+  $("nameEntry").style.display =
+    savedName === "Friend" ? "" : "none";
 }
 
 function renderTasks() {
